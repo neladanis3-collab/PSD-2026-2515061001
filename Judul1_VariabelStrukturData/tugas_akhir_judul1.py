@@ -1,5 +1,5 @@
 def menu():
-    print("\n=== MENU CATATAN PENGELUARAN ===")
+    print("\n MENU CATATAN PENGELUARAN ")
     print("1. Tampilkan semua pengeluaran")
     print("2. Tampilkan address setiap data")
     print("3. Tambah / ubah pengeluaran")
