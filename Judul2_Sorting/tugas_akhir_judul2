@@ -1,0 +1,15 @@
+JUDUL >> SISTEM PENGURUTAN NAMA OBAT BERDASARKAN ABJAD DARI A-Z
+
+DESKRIPSI >> Program ini saya buat untuk mengurutkan nama obat sesuai abjad (A–Z) menggunakan metode Bubble Sort.
+Jadi alurnya, pertama user akan memasukkan jumlah obat, lalu memasukkan nama-nama obatnya satu per satu ke dalam list. 
+Setelah itu, data yang sudah diterima akan diurutkan menggunakan fungsi bubble_sort, yang cara kerjanya membandingin 
+data yang bersebelahan, jika urutannya salah maka akan langsung ditukar. Proses ini diulang terus sampai semua data urut.
+Dalam fungsinya, saya menggunakan .lower() supaya huruf besar dan kecil tidak berpengaruh ke hasil urutan. Terakhir,
+program akan menampilkan daftar obat sebelum dan sesudah diurutkan.
+
+
+SOURCE CODE >>
+
+
+
+
