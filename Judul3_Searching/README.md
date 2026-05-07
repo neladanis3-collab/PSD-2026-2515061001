@@ -74,14 +74,8 @@ int(...) untuk mengubah teks hasil input menjadi bilangan bulat.
 OUTPUT >> 
 <img width="618" height="581" alt="Screenshot 2026-05-07 195651" src="https://github.com/user-attachments/assets/ddc9d987-98db-492a-b88b-f87a5e550e9c" />
 
-Binary Search cara kerjanya dengan cara membagi data jadi dua bagian. Di program ini ada 5 buku yang sudah diurutkan berdasarkan alfabet,yaitu alpro, kalkulus, matdis, pemrograman, dan rpl dengan indeks 0 sampai 4. 
-Buku yang dicari adalah “rpl”.Di pengecekan pertama, program mencari indeks tengah dari 0 sampai 4, hasilnya indeks 2 yaitu “matdis”. Karena secara alfabet “matdis” masih lebih 
-kecil dari “rpl”, maka pencarian lanjut ke bagian kanan dengan mengubah batas kiri jadi indeks 3. Di pengecekan kedua, program hitung lagi titik tengah dari indeks 3 sampai 4,
-hasilnya indeks 3 yaitu “pemrograman”. Karena “pemrograman” juga masih lebih kecil dari “rpl”, maka pencarian lanjut lagi ke kanan dan batas kiri pindah ke indeks 4.
-Di pengecekan ketiga, batas kiri dan kanan sama-sama ada di indeks 4, jadi titik tengahnya juga indeks 4 yaitu “rpl”. Karena data yang dicari sudah ketemu, program langsung berhenti
-dan menyimpan posisi buku tersebut. Hasil akhirnya, program menampilkan kalau buku ditemukan di indeks ke-4 dengan judul “rpl”. Program hanya perlu 3 kali pengecekan untuk
-menemukan buku, jadi lebih cepat dan efisien dibanding Sequential Search yang harus ngecek data satu-satu dari awal.
+Binary Search cara kerjanya dengan cara membagi data jadi dua bagian. Di program ini ada 5 buku yang sudah diurutkan berdasarkan alfabet,yaitu alpro, kalkulus, matdis, pemrograman, dan rpl dengan indeks 0 sampai 4. Buku yang dicari adalah “rpl”.Di pengecekan pertama, program mencari indeks tengah dari 0 sampai 4, hasilnya indeks 2 yaitu “matdis”. Karena secara alfabet “matdis” masih lebih kecil dari “rpl”, maka pencarian lanjut ke bagian kanan dengan mengubah batas kiri jadi indeks 3. Di pengecekan kedua, program hitung lagi titik tengah dari indeks 3 sampai 4, hasilnya indeks 3 yaitu “pemrograman”. Karena “pemrograman” juga masih lebih kecil dari “rpl”, maka pencarian lanjut lagi ke kanan dan batas kiri pindah ke indeks 4.Di pengecekan ketiga, batas kiri dan kanan sama-sama ada di indeks 4, jadi titik tengahnya juga indeks 4 yaitu “rpl”. Karena data yang dicari sudah ketemu, program langsung berhenti dan menyimpan posisi buku tersebut. Hasil akhirnya, program menampilkan kalau buku ditemukan di indeks ke-4 dengan judul “rpl”. Program hanya perlu 3 kali pengecekan untuk menemukan buku, jadi lebih cepat dan efisien dibanding Sequential Search yang harus ngecek data satu-satu dari awal.
 
 LINK YOUTUBE >>
-
+https://youtu.be/IWD2EOLX_KE
 
