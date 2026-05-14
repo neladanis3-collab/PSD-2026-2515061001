@@ -30,4 +30,41 @@ PENJELASAN CODE >>
 18. menempatkan aktivitas di posisi yang baru
 19. f-string adalah cara menulis variabel di dalam teks, pakai {}.
 20. -
-21. 
+21 - 24. Pop digunakan untuk mengambil atau menghapus item paling atas. Kalau kosong, langsung stop.
+25 - 26. Menampilkan terlebih dahulu aktivitas yang dihapus, terus turunin penunjuknya satu posisi. Data lamanya masih disimpan di list, tapi dianggap udah ngga ada karena penunjuknya turun.
+27. -
+28 - 32. Peek digunakan untuk ngintip/ngeliat aja aktivitas paling atas, tapi ngga dihapus. Bedanya sama pop, top_idx nggak diubah.
+33. -
+34. buat fungsi bernama tampilkan_riwayat. self berarti fungsi ini punya class StackAktivitas, jadi dia bisa akses data data yang ada di dalamnya.
+35 - 36. Sebelum nampilin apapun, cek dulu tumpukannya kosong atau ngga. kalau True print "kosong!" terus return maka fungsi langsung berhenti, ngga lanjut ke bawah. kalau False berati skip bagian ini, dan lanjut terus.
+37. return tidak mengirim nilai apapun, tugasnya cuma stop, dan keluar dari fungsi
+38. -
+39. \n artinya baris baru (enter), jadi sebelum tulisannya ada jarak kosong satu baris supaya rapi.
+40. looping untuk nampilin satu-satu aktivitasnya. range(self.top_idx, -1, -1) maksudnya range buat bikin urutan angka. pertama self.top_idx , mulai dari angka ini. kedua -1 berhenti sebelum angka ini. ketiga -1 tiap langkah mundur 1.
+41. nampilin aktivitas satu per satu sesuai posisi i. self.st[i] artinya seperti ambil isi di nomor i.
+42. -
+43. -
+44. deklarasi fungsi utama
+45. buat objek dari class StackAktivitas.
+46. buat variabel pilih dan isi dengan angka 0.
+47. -
+48. terus looping selama pilihan bukan 5 (keluar)
+49 - 54. print yang akan ditampilkan. user akan diinstruksikan untuk memilih
+55. -
+56 - 60. try dan except untuk mengantisipasi error. Kalau user ketik huruf, int() akan error dan ditangkap except ValueError dan langsung minta input lagi pakai continue.
+61. -
+62 - 79. akan memanggil fungsi sesuai pilihan menu. Kalau inputnya di luar 1-5, masuk ke else yaitu pilihan tidak valid.
+80. -
+81. -
+82 - 83. name variabel otomatis, kalau filenya dijalanin langsung, baru panggil fungsi main()
+Kalau file ini diimport dari file lain maka fungsi main() ngga ikut berjalan.
+
+OUTPUT >> 
+<img width="410" height="871" alt="Screenshot 2026-05-14 213608" src="https://github.com/user-attachments/assets/1708a778-0961-41a2-b8b1-23f0bce64585" />
+<img width="360" height="857" alt="Screenshot 2026-05-14 213630" src="https://github.com/user-attachments/assets/66936b2f-58b8-444c-a659-c7f251355dad" />
+<img width="322" height="317" alt="Screenshot 2026-05-14 213639" src="https://github.com/user-attachments/assets/e11b728b-e9ae-425b-98fb-686601fcfe94" />
+Pertama user milih menu 1 (Push) sebanyak 4 kali buat masukin aktivitas satu-satu, yaitu "membaca", "mengaji", "menulis", sama "menonton". Setiap kali dimasukin, program langsung konfirmasi kalau aktivitasnya berhasil ditambahkan. setelah  itu user milih menu 4 buat lihat semua riwayat. Hasilnya nampilin dari atas ke bawah, jadi "menonton" muncul paling duluan, terus "menulis", "mengaji", dan "membaca" paling bawah. Urutannya kebalik dari urutan masukinnya karena konsep stack.
+lalu user milih menu 2 (Pop) buat hapus aktivitas teratas. Yang kehapus otomatis "menonton" karena dia lagi di posisi paling atas tumpukan. Ini namanya LIFO yaitu yang terakhir masuk, yang pertama keluar. Setelah "menonton" dihapus, user milih menu 3 (Peek) buat ngintip aktivitas teratas sekarang. Hasilnya "menulis" karena setelah "menonton" dihapus, "menulis" jadi yang paling atas. Peek cuma ngintip aja, nggak menghapus apapun.  User milih menu 4 lagi buat mastiin. Sekarang tinggal 3 aktivitas "menulis", "mengaji", sama "membaca". "menonton" udah beneran hilang dari stack.
+Terakhir user milih menu 5 dan program nampilin "Program selesai." dan berhenti.
+
+LINK YOUTUBE >> 
