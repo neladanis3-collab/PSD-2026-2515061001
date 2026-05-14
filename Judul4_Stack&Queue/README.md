@@ -10,7 +10,7 @@ SOURCE CODE >>
 <img width="640" height="331" alt="Screenshot 2026-05-12 214205" src="https://github.com/user-attachments/assets/3b1315d2-d83a-4c14-9d43-ab8a8f388f30" />
 
 PENJELASAN CODE >>
-1. class ini seperti rumus agar bisa menjalankan banyak aktivitas. Lalu mencetak bernama StackActivitas.
+1. class ibaratin seperti rumus biar bisa ngejalanin banyak aktivitas. Lalu mencetak bernama StackActivitas.
 2. __init__ fungsi khusus yang otomatis jalan kalo kita buat aktivitas baru. max_size=100 kalau kita tidak isi sendiri nilainya, maka otomatis akan diisi default-nya 100.
 3. Menyimpan batas maksimal tumpukan. self berarti untuk milik objek ini sendiri
 4. Membuat list (array) sebanyak 100 slot, isinya None (kosong). anggap seperti wadah/rak nya buat nyimpan aktivitas.
@@ -68,3 +68,4 @@ lalu user milih menu 2 (Pop) buat hapus aktivitas teratas. Yang kehapus otomatis
 Terakhir user milih menu 5 dan program nampilin "Program selesai." dan berhenti.
 
 LINK YOUTUBE >> 
+https://youtu.be/cpgluMyNaLI
