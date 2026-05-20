@@ -1,146 +1,183 @@
-class Node:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
+class Siswa:
+    def __init__(self, nilai):
+        self.nilai = nilai
+        self.kiri = None
+        self.kanan = None
 
 
-class BSTDasar:
+class DataNilaiSiswa:
     def __init__(self):
         self.root = None
 
-    def insert_node(self, root, key):
+    def tambah_nilai_node(self, root, nilai):
         if root is None:
-            return Node(key)
-        if key < root.key:
-            root.left = self.insert_node(root.left, key)
-        elif key > root.key:
-            root.right = self.insert_node(root.right, key)
+            return Siswa(nilai)
+
+        if nilai < root.nilai:
+            root.kiri = self.tambah_nilai_node(root.kiri, nilai)
+
+        elif nilai > root.nilai:
+            root.kanan = self.tambah_nilai_node(root.kanan, nilai)
+
         return root
 
-    def insert(self, key):
-        self.root = self.insert_node(self.root, key)
+    def tambah_nilai(self, nilai):
+        self.root = self.tambah_nilai_node(self.root, nilai)
 
-    def search_node(self, root, key):
+    def cari_nilai_node(self, root, nilai):
         if root is None:
             return False
-        if root.key == key:
-            return True
-        if key < root.key:
-            return self.search_node(root.left, key)
-        return self.search_node(root.right, key)
 
-    def search(self, key):
-        return self.search_node(self.root, key)
+        if root.nilai == nilai:
+            return True
+
+        if nilai < root.nilai:
+            return self.cari_nilai_node(root.kiri, nilai)
+
+        return self.cari_nilai_node(root.kanan, nilai)
+
+    def cari_nilai(self, nilai):
+        return self.cari_nilai_node(self.root, nilai)
 
     def inorder(self, root):
         if root is None:
             return
-        self.inorder(root.left)
-        print(root.key, end=" ")
-        self.inorder(root.right)
+
+        self.inorder(root.kiri)
+        print(root.nilai, end=" ")
+        self.inorder(root.kanan)
 
     def preorder(self, root):
         if root is None:
             return
-        print(root.key, end=" ")
-        self.preorder(root.left)
-        self.preorder(root.right)
+
+        print(root.nilai, end=" ")
+        self.preorder(root.kiri)
+        self.preorder(root.kanan)
 
     def postorder(self, root):
         if root is None:
             return
-        self.postorder(root.left)
-        self.postorder(root.right)
-        print(root.key, end=" ")
 
-    def find_min(self, root):
+        self.postorder(root.kiri)
+        self.postorder(root.kanan)
+        print(root.nilai, end=" ")
+
+    def nilai_terendah(self, root):
         if root is None:
             return -1
-        current = root
-        while current.left is not None:
-            current = current.left
-        return current.key
 
-    def find_max(self, root):
+        current = root
+
+        while current.kiri is not None:
+            current = current.kiri
+
+        return current.nilai
+
+    def nilai_tertinggi(self, root):
         if root is None:
             return -1
+
         current = root
-        while current.right is not None:
-            current = current.right
-        return current.key
 
-    def count_nodes(self, root):
+        while current.kanan is not None:
+            current = current.kanan
+
+        return current.nilai
+
+    def jumlah_siswa(self, root):
         if root is None:
             return 0
-        return 1 + self.count_nodes(root.left) + self.count_nodes(root.right)
 
-    def sum_nodes(self, root):
+        return 1 + self.jumlah_siswa(root.kiri) + self.jumlah_siswa(root.kanan)
+
+    def total_nilai(self, root):
         if root is None:
             return 0
-        return root.key + self.sum_nodes(root.left) + self.sum_nodes(root.right)
+
+        return (
+            root.nilai
+            + self.total_nilai(root.kiri)
+            + self.total_nilai(root.kanan)
+        )
 
 
 def main():
-    bst = BSTDasar()
+    sekolah = DataNilaiSiswa()
     pilih = 0
+
     while pilih != 10:
-        print("\n=== BST (Dasar) ===")
-        print("1. Insert")
-        print("2. Search")
-        print("3. Inorder")
-        print("4. Preorder")
-        print("5. Postorder")
+        print("\n SISTEM DATA NILAI SISWA")
+        print("1. insert ")
+        print("2. search ")
+        print("3. inorder")
+        print("4. preorder")
+        print("5. postorder")
         print("6. Min")
         print("7. Max")
-        print("8. Count nodes")
-        print("9. Sum nodes")
+        print("8. Count Nodes")
+        print("9. Sum Nodes")
         print("10. Keluar")
+
         try:
-            pilih = int(input("Pilih: "))
+            pilih = int(input("Pilih menu: "))
         except ValueError:
-            print("Input tidak valid!")
+            print("Input harus angka!")
             continue
+
         if pilih == 1:
             try:
-                x = int(input("Masukkan nilai: "))
-                bst.insert(x)
-                print(f"Nilai {x} berhasil dimasukkan")
+                nilai = int(input("Masukkan nilai siswa: "))
+                sekolah.tambah_nilai(nilai)
+                print(f"Nilai {nilai} berhasil ditambahkan")
+
             except ValueError:
                 print("Input tidak valid!")
+
         elif pilih == 2:
             try:
-                x = int(input("Cari nilai: "))
-                if bst.search(x):
-                    print("Ditemukan")
+                nilai = int(input("Cari nilai siswa: "))
+
+                if sekolah.cari_nilai(nilai):
+                    print("Nilai ditemukan")
                 else:
-                    print("Tidak ditemukan")
+                    print("Nilai tidak ditemukan")
+
             except ValueError:
                 print("Input tidak valid!")
+
         elif pilih == 3:
             print("Inorder: ", end="")
-            bst.inorder(bst.root)
+            sekolah.inorder(sekolah.root)
             print()
+
         elif pilih == 4:
             print("Preorder: ", end="")
-            bst.preorder(bst.root)
+            sekolah.preorder(sekolah.root)
             print()
+
         elif pilih == 5:
             print("Postorder: ", end="")
-            bst.postorder(bst.root)
+            sekolah.postorder(sekolah.root)
             print()
+
         elif pilih == 6:
-            print(f"Min: {bst.find_min(bst.root)}")
+            print("Nilai terendah:", sekolah.nilai_terendah(sekolah.root))
+
         elif pilih == 7:
-            print(f"Max: {bst.find_max(bst.root)}")
+            print("Nilai tertinggi:", sekolah.nilai_tertinggi(sekolah.root))
+
         elif pilih == 8:
-            print(f"Jumlah node: {bst.count_nodes(bst.root)}")
+            print("Jumlah siswa:", sekolah.jumlah_siswa(sekolah.root))
+
         elif pilih == 9:
-            print(f"Jumlah nilai: {bst.sum_nodes(bst.root)}")
+            print("Total seluruh nilai:", sekolah.total_nilai(sekolah.root))
+
         elif pilih == 10:
-            print("Program selesai.")
+            print("Program selesai")
+
         else:
-            print("Pilihan tidak valid!")
+            print("Pilihan tidak tersedia")
 
 
 if __name__ == "__main__":
