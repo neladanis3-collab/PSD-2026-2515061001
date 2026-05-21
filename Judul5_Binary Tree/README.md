@@ -68,3 +68,4 @@ Pada awal program, ditampilkan menu utama yang berisi beberapa pilihan operasi s
 Setelah tiga data dimasukkan, pengguna memilih menu Count Nodes. Output “Jumlah siswa: 3” menunjukkan bahwa BST memiliki tiga node, yaitu 87, 67, dan 97. Kemudian pengguna memilih menu Sum Nodes untuk menjumlahkan seluruh nilai siswa yang tersimpan dalam BST. Hasilnya adalah 251, yang diperoleh dari penjumlahan 87 + 67 + 97. Setelah itu pengguna memilih menu preorder. Traversal preorder bekerja dengan urutan root, kiri, lalu kanan. Oleh karena itu output yang dihasilkan adalah “87 67 97”, dimulai dari akar pohon terlebih dahulu kemudian dilanjutkan ke cabang kiri dan kanan. Terakhir, pengguna memilih menu keluar sehingga program menampilkan pesan “Program selesai” sebagai tanda bahwa eksekusi program telah berakhir.
 
 LINK YOUTUBE >>
+https://youtu.be/fwpVu1_9bNY?si=IusToRa-0C2f6rTC
