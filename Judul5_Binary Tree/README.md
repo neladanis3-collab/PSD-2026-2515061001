@@ -60,6 +60,11 @@ if __name__ == "__main__":
 Bagian ini digunakan agar fungsi main() hanya dijalankan ketika file Python dieksekusi secara langsung. Jika file ini di-import ke program lain, maka fungsi main() tidak otomatis berjalan.
 
 OUTPUT >>
+<img width="270" height="803" alt="Screenshot 2026-05-21 040141" src="https://github.com/user-attachments/assets/493a0e0d-ba2d-4e46-b14a-d1342bdc4170" />
+<img width="236" height="741" alt="Screenshot 2026-05-21 040156" src="https://github.com/user-attachments/assets/03103a6a-6288-4c3c-97fd-6cf182779477" />
+<img width="221" height="260" alt="Screenshot 2026-05-21 040203" src="https://github.com/user-attachments/assets/34c6eaa5-345c-4275-9a1d-5f40ca462bdd" />
 Pada awal program, ditampilkan menu utama yang berisi beberapa pilihan operasi seperti insert, search, traversal, mencari nilai minimum dan maksimum, menghitung jumlah node, hingga keluar dari program. Pengguna kemudian memilih menu insert dan memasukkan nilai 87. Karena BST masih kosong, nilai 87 menjadi root atau akar utama dari pohon. Setelah itu pengguna kembali memilih menu insert dan memasukkan nilai 67. Program membandingkan nilai 67 dengan root 87, dan karena 67 lebih kecil dari 87 maka data ditempatkan di cabang kiri. Selanjutnya pengguna memasukkan nilai 97. Karena 97 lebih besar dari 87, maka nilai tersebut ditempatkan di cabang kanan pohon.
 
 Setelah tiga data dimasukkan, pengguna memilih menu Count Nodes. Output “Jumlah siswa: 3” menunjukkan bahwa BST memiliki tiga node, yaitu 87, 67, dan 97. Kemudian pengguna memilih menu Sum Nodes untuk menjumlahkan seluruh nilai siswa yang tersimpan dalam BST. Hasilnya adalah 251, yang diperoleh dari penjumlahan 87 + 67 + 97. Setelah itu pengguna memilih menu preorder. Traversal preorder bekerja dengan urutan root, kiri, lalu kanan. Oleh karena itu output yang dihasilkan adalah “87 67 97”, dimulai dari akar pohon terlebih dahulu kemudian dilanjutkan ke cabang kiri dan kanan. Terakhir, pengguna memilih menu keluar sehingga program menampilkan pesan “Program selesai” sebagai tanda bahwa eksekusi program telah berakhir.
+
+LINK YOUTUBE >>
